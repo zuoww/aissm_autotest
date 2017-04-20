@@ -1,0 +1,17 @@
+Wed, 30 Nov 2016 17:50:55 BasicFunction.pyo[line:53] INFO Q:\AiTest\dist
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:331] INFO function < setMaxNum(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > start
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:342] INFO function < setMaxNum(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > end
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:331] INFO function < setRegionId(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > start
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:342] INFO function < setRegionId(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > end
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:331] INFO function < setSysEnv(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > start
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:342] INFO function < setSysEnv(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > end
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:331] INFO function < setyMoth(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > start
+Wed, 30 Nov 2016 17:50:55 PackFunction.pyo[line:342] INFO function < setyMoth(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>) > end
+Wed, 30 Nov 2016 17:50:56 PackFunction.pyo[line:331] INFO function < drawoutData(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>,"case","13") > start
+Wed, 30 Nov 2016 17:50:56 PackFunction.pyo[line:331] INFO function < queryTblCaseDatapoolRelByCaseId(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>,"13") > start
+Wed, 30 Nov 2016 17:50:56 DataDrawout.pyo[line:161] INFO queryTblCaseDatapoolRelByCaseId  start
+Wed, 30 Nov 2016 17:50:56 DBpool.pyo[line:150] INFO SELECT rel.case_id,rel.datapool_keyword,rel.sql_code,rel.sql_type,rel.db_name,rel.sql_desc,
+               rel.project_id,rel.eparchy_code,rel.ref_id  FROM tbl_case_datapool_rel rel where rel.status=1 and sql_type='Get' and rel.sql_code!=''  and case_id in(13)or FIND_IN_SET('13',ref_id)
+Wed, 30 Nov 2016 17:50:56 DataDrawout.pyo[line:172] INFO  queryTblCaseDatapoolRelByCaseId  end
+Wed, 30 Nov 2016 17:50:56 PackFunction.pyo[line:342] INFO function < queryTblCaseDatapoolRelByCaseId(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>,"13") > end
+Wed, 30 Nov 2016 17:50:56 PackFunction.pyo[line:331] INFO function < getInsertSql(<DataDrawout.DataDrawout instance at 0x00000000034F9E88>,"out_sql/case_13.sql",[[13L, u'DP_13', u"select 'ACCESS_NUM:'||a.access_num from ins2.um_subscriber_471 a\r\nwhere a.subscriber_type = '1'\r\n   and a.region_id = '471'\r\n   and a.subscriber_status = '1'\r\n   and a.mgmt_district = '471'\r\n   and a.data_status = 1\r\n   and rownum < 50\r\n   and not exists\r\n   (select c.subscriber_ins_id from ins2.um_prod_sta_471 c where c.subscriber_ins_id = a.subscriber_ins_id\r\n    and c.busi_code in ('1011','1013','1015','12008','4030','4020','12013','12012','330003'))\r\n   and not exists\r\n   ((select cust_id from party.CM_CUST_SPECIAL_LIST M where M.Cust_Id = a.cust_id)\r\n   union all\r\n   (SELECT cust_id FROM ORD.OM_ITEM where cust_id=a.cust_id))\r\n   and exists\r\n   ((select access_num from party.cm_account where cust_id=a.cust_id)\r\n   union all\r\n   (select access_num from party.cm_cust_realname where IS_CONFIRM=1 and access_num=a.access_num))", u'Get', u'NULL', u'\u505c\u5f00\u673a-\u7ba1\u7406\u505c\u673a', 1L, u'0471', u'15,17,33,28,30,349,171,172,173,93']]) > start

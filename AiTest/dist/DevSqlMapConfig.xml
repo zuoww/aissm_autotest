@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<properties resource="verreportdb.properties" />
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="false" maxRequests="40" maxSessions="50"
+		maxTransactions="40" useStatementNamespaces="true"
+		defaultStatementTimeout="50" statementCachingEnabled="true"
+		classInfoCacheEnabled="true" />
+	<transactionManager type="JDBC" commitRequired="false">
+		<dataSource type="dbcp">
+			<property name="JDBC.Driver" value="${driver}" />
+			<property name="JDBC.ConnectionURL" value="${url}" />
+			<property name="JDBC.Username" value="${username}" />
+			<property name="JDBC.Password" value="${password}" />
+		</dataSource>
+	</transactionManager>
+
+	<sqlMap resource="ibatis/dataValidate/devdataValidate.xml" />
+	<sqlMap resource="ibatis/dataValidate/devreport.xml" />
+	<sqlMap resource="ibatis/dataValidate/devbill.xml" />
+	<sqlMap resource="ibatis/dataValidate/dataDrawout.xml" />
+	<sqlMap resource="ibatis/reportmodel/report_model.xml" />
+</sqlMapConfig>
